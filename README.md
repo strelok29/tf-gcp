@@ -1,12 +1,28 @@
-<hide> secret </hide>
+---
+output: html_document
+---
 
-<style>
-hide {
-  background-color: #d6d6d6;
-  color: #d6d6d6;
+```{css, echo=FALSE}
+.spoiler {
+  visibility: hidden;
 }
-hide:hover {
-  background-color: white;
-  color: black;
+
+.spoiler::before {
+  visibility: visible;
+  content: "Spoiler alert! Hover me to see the answer."
 }
-</style>
+
+.spoiler:hover {
+  visibility: visible;
+}
+
+.spoiler:hover::before {
+  display: none;
+}
+```
+
+You can insert a message in raw `HTML`:
+<p class="spoiler">Answer</p>
+
+A better approach is to use bracketed spans:  
+[This is another answer]{.spoiler}
