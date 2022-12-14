@@ -2,7 +2,7 @@
 output: html_document
 ---
 
-```{css, echo=FALSE}
+{css, echo=FALSE}
 .spoiler {
   visibility: hidden;
 }
@@ -19,7 +19,6 @@ output: html_document
 .spoiler:hover::before {
   display: none;
 }
-```
 
 You can insert a message in raw `HTML`:
 <p class="spoiler">Answer</p>
